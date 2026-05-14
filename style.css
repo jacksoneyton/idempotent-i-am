@@ -169,7 +169,7 @@ section { padding: 96px 0; border-top: 1px solid var(--rule); }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
 
 .section-label {
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.35em;
   color: var(--muted);
   padding-bottom: 40px;
