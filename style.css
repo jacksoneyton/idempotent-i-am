@@ -451,6 +451,61 @@ footer {
   color: var(--dim);
 }
 
+/* ── Lightbox ───────────────────────────────────────── */
+img.expandable {
+  cursor: zoom-in;
+}
+img.expandable:hover {
+  filter: brightness(1) !important;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+#lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+#lb-img {
+  max-width: min(88vw, 760px);
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  border: 1px solid rgba(232, 230, 224, 0.15);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+}
+.lb-close {
+  position: fixed;
+  top: 28px;
+  right: 36px;
+  background: none;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color 0.2s, color 0.2s;
+}
+.lb-close:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 800px) {
   #nav { padding: 20px 28px; }

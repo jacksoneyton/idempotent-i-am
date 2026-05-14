@@ -80,7 +80,7 @@
       <p class="section-label">// singles</p>
       <div class="single-card reveal">
         <div class="single-cover">
-          <img src="assets/images/fingerprints.png" alt="Fingerprints on June cover art" loading="lazy">
+          <img src="assets/images/fingerprints.png" alt="Fingerprints on June cover art" loading="lazy" class="expandable">
         </div>
         <div class="single-info">
           <p class="single-status">out now</p>
@@ -103,7 +103,7 @@
 
       <div class="album-intro reveal">
         <div class="album-cover">
-          <img src="assets/images/project-chronos.png" alt="Project Chronos album art" loading="lazy">
+          <img src="assets/images/project-chronos.png" alt="Project Chronos album art" loading="lazy" class="expandable">
         </div>
         <div class="album-desc">
           <p class="album-status">coming soon</p>
@@ -135,7 +135,7 @@
 
         <div class="track reveal">
           <div class="track-thumb">
-            <img src="assets/images/fingerprints.png" alt="" loading="lazy">
+            <img src="assets/images/fingerprints.png" alt="" loading="lazy" class="expandable">
           </div>
           <div class="track-meta">
             <span class="track-n">02</span>
@@ -164,7 +164,7 @@
 
         <div class="track reveal">
           <div class="track-thumb">
-            <img src="assets/images/deprecate.png" alt="" loading="lazy">
+            <img src="assets/images/deprecate.png" alt="" loading="lazy" class="expandable">
           </div>
           <div class="track-meta">
             <span class="track-n">04</span>
@@ -246,7 +246,7 @@
 
         <div class="track reveal">
           <div class="track-thumb">
-            <img src="assets/images/exhibit-you.png" alt="" loading="lazy">
+            <img src="assets/images/exhibit-you.png" alt="" loading="lazy" class="expandable">
           </div>
           <div class="track-meta">
             <span class="track-n">09</span>
@@ -293,6 +293,12 @@
       <p class="footer-year">© 2026</p>
     </div>
   </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" aria-modal="true" role="dialog" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">&#x2715;</button>
+    <img id="lb-img" src="" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
