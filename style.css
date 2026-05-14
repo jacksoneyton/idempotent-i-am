@@ -212,6 +212,65 @@ section { padding: 96px 0; border-top: 1px solid var(--rule); }
   margin-bottom: 0 !important;
 }
 
+/* ── Singles ────────────────────────────────────────── */
+.single-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.single-cover { position: relative; }
+.single-cover img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.88);
+  transition: filter 0.35s;
+}
+.single-cover img:hover { filter: brightness(1); }
+.single-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--rule);
+  pointer-events: none;
+}
+.single-info h2 {
+  font-size: 22px;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 20px;
+}
+.single-info p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 32px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.single-status {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  margin-bottom: 20px !important;
+  font-style: normal !important;
+}
+.album-status {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: 4px 12px;
+  margin-bottom: 20px;
+}
+
 /* ── Album intro ────────────────────────────────────── */
 .album-intro {
   display: grid;
@@ -394,11 +453,13 @@ footer {
   .container { padding: 0 28px; }
   section { padding: 72px 0; }
 
-  .album-intro {
+  .album-intro,
+  .single-card {
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .album-cover { max-width: 260px; }
+  .album-cover,
+  .single-cover { max-width: 260px; }
 }
 
 @media (max-width: 560px) {
